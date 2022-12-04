@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AMM_Lab14.VIews.StudentPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform 
+                    x:TypeArguments="Thickness"
+                    Android="20"
+                    iOS="50"/>
+            </StackLayout.Padding>
+
+            <Label 
+                Text="Apellidos"/>
+            <Entry 
+                Placeholder="Apellidos"
+                Text="{Binding LastName}"/>
+            <Label
+                Text="Nombres"/>
+            <Entry 
+                Placeholder="Nombres"
+                Text="{Binding FirstName}"/>
+
+            <Label
+                Text="Dirección"/>
+            <Entry 
+                Placeholder="Dirección"
+                Text="{Binding Adress}"/>
+
+            <Label
+                Text="Edad"/>
+            <Entry 
+                Placeholder="Edad"
+                Text="{Binding Edad}"/>
+
+            <Button
+                Text="Guardar"
+                Command="{Binding CreateCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
